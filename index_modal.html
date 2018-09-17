@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Garden</title>
+
+    <style>
+        /* Website */
+
+        .main {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+
+        body {
+            background-color: orangered;
+            font-family: 'Lato', sans-serif;
+            color: white;
+            position: relative;
+            margin: 0;
+            min-height: 100%;
+            padding: 20px;
+
+        }
+
+
+        h2 {
+            text-transform: capitalize;
+        }
+
+        nav {
+            display: flex;
+            background-color: darkred;
+            padding: 2px;
+            font-family: 'Oswald', sans-serif;
+            flex-wrap: wrap;
+            text-transform: uppercase;
+            justify-content: center;
+
+
+        }
+
+        .menu-item {
+            background-color: darkred;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        .menu-item:hover {
+            background-color: #ff0000;
+            /* Green */
+            color: white;
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media only screen and (max-width: 1229px) {
+            .main-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media only screen and (max-width: 780px) {
+            .ret img {
+                width: 100%
+            }
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .ret img {
+                width: 100%
+            }
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        #modal {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            background-color: rgba(0, 0, 0, .7);
+            text-align: center;
+            display: none;
+
+        }
+
+        #modal-content {
+            width: 70vw;
+            height: 70vh;
+            background-color: rgba(250, 250, 250, 1);
+            margin: auto;
+
+        }
+
+
+        #modal.vis {
+            display: block;
+
+
+        }
+
+        .modal-billede {
+            width: 50vw;
+            height: auto;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <section id="modal">
+        <button>Close</button>
+        <div id="modal-content">
+            <h2 class="modal-navn"></h2>
+            <img class="modal-billede" src="" alt="">
+            <p class="modal-langbeskrivelse"></p>
+        </div>
+
+
+    </section>
+    <header>
+        <h1>Babushka </h1>
+        <h2>Menu</h2>
+
+        <h3></h3>
+        <nav>
+            <button class="menu-item" data-kategori="forretter">Forretter</button>
+            <button class="menu-item" data-kategori="hovedretter">Hovedretter</button>
+            <button class="menu-item" data-kategori="desserter">Desserter</button>
+            <button class="menu-item" data-kategori="drikkevarer">Drikkevarer</button>
+            <button class="menu-item" data-kategori="sideorders">Sideorders</button>
+        </nav>
+
+    </header>
+    <main class="main-container">
+        <section class="data-container"></section>
+    </main>
+    <template class="retter-template">
+            <article>
+                <h2 class = "data-navn"></h2>
+                <img class = "data-billede"  src = "" alt = "">
+                <p class="data-kortbeskrivelse"></p>
+                <p>Pris: <span class="data-pris"></span> DKK </p>
+            </article>
+        </template>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+
+        let dest = document.querySelector(".data-container"),
+            retter,
+            kategoriFilter = "alle";
+
+
+        async function hentJson() {
+            let jsonData = await fetch("json/menu.json");
+            retter = await jsonData.json();
+
+            //console.log(retter);
+
+            visRetter();
+        }
+
+        document.querySelectorAll(".menu-item").forEach(knap => {
+            //console.log(knap);
+            knap.addEventListener("click", filtering)
+
+        });
+
+        function filtering() {
+
+            kategoriFilter = this.getAttribute("data-kategori");
+            //console.log(kategoriFilter);
+            visRetter();
+
+
+
+        }
+
+        function visRetter() {
+            let temp = document.querySelector(".retter-template");
+            let modtager = document.querySelector(".main-container");
+            modtager.textContent = "";
+            document.querySelector("header h3").textContent = kategoriFilter;
+            retter.forEach(ret => {
+                console.log(ret.kategori, kategoriFilter);
+                if (ret.kategori == kategoriFilter || kategoriFilter == "alle") {
+
+                    console.log(ret.kategori, kategoriFilter);
+                    let klon = temp.cloneNode(true).content;
+                    klon.querySelector(".data-navn").textContent = ret.navn;
+                    klon.querySelector(".data-billede").src = "imgs/small/" + ret.billede + "-sm.jpg";
+                    klon.querySelector(".data-billede").addEventListener("click", () => {
+                        visModal(ret);
+                    });
+                    klon.querySelector(".data-billede").alt = "billede" + ret.navn;
+                    klon.querySelector(".data-kortbeskrivelse").textContent = ret.kortbeskrivelse;
+                    klon.querySelector(".data-pris").textContent = ret.pris;
+                    modtager.appendChild(klon);
+                }
+            });
+        }
+
+
+        function visModal(retter) {
+            let modal = document.querySelector("#modal");
+            modal.classList.add("vis");
+            modal.querySelector(".modal-navn").textContent = retter.navn;
+            modal.querySelector(".modal-billede").src = "imgs/small/" + retter.billede + "-sm.jpg";
+            modal.querySelector(".modal-billede").alt = "Foto af" + retter.navn;
+            modal.querySelector(".modal-langbeskrivelse").textContent = retter.langbeskrivelse;
+            modal.querySelector("button").addEventListener("click", skjulModal);
+
+        }
+
+        function skjulModal() {
+            //window.scrollTo(0);
+            modal.classList.remove("vis");
+
+        }
+
+    </script>
+
+
+    <footer>
+        <br />
+        <hr /><br />
+        <br>© INDIAN GARDEN 2018
+    </footer>
+
+</body>
+
+</html>
