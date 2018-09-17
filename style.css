@@ -5,7 +5,7 @@
 
 
 body {
-    background-color: orangered;
+    background-color: whitesmoke;
     font-family: 'Lato', sans-serif;
     color: white;
     position: relative;
@@ -36,7 +36,7 @@ nav {
     background-color: rgba(0, 0, 0, 0.54);
     /* Green */
     border: none;
-    color: white;
+    color: whitesmoke;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -45,7 +45,7 @@ nav {
 }
 
 .menu-item:hover {
-    background-color: #ff0000;
+    background-color: whitesmoke;
     /* Green */
     color: white;
 }

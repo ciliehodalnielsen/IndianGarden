@@ -1,0 +1,192 @@
+[
+  {
+    "kategori": "forretter",
+    "navn": "PAPPADAMS OG CHUTNEY",
+    "pris": 40,
+    "kortbeskrivelse": "Pappadams med chutney %u2013 en solid starter",
+    "langbeskrivelse": "2 styk stegte, krydrede og sprøde fladbrød lavet af linse-og rismel. Serveres med chutney.",
+    "billede": "pappadams_chutney",
+    "id": 1,
+    "": ""
+  },
+  {
+    "kategori": "forretter",
+    "navn": "SABZI SAMOSAS",
+    "pris": 60,
+    "kortbeskrivelse": "Fyldte samosas med ærter og kartofler",
+    "langbeskrivelse": "Indbagte ærter og kartofler, krydret og friturestegt. Serveres med grøn salat.",
+    "billede": "sabzi_samosas",
+    "id": 2,
+    "": ""
+  },
+  {
+    "kategori": "forretter",
+    "navn": "PRAWN PAKORA",
+    "pris": 80,
+    "kortbeskrivelse": "Dybstegte rejer og chutney",
+    "langbeskrivelse": "Dybstegte rejer i krydret kikærtedej. Serveres med salat og chutney.",
+    "billede": "prawn_pakora",
+    "id": 3,
+    "": ""
+  },
+  {
+    "kategori": "forretter",
+    "navn": "SABZI PAKORA",
+    "pris": 50,
+    "kortbeskrivelse": "Dybstegte grønsager og chutney.",
+    "langbeskrivelse": "Dybstegte grøntsager i krydret kikærtedej. Serveres med salat og chutney.",
+    "billede": "sabzi_pakora",
+    "id": 4,
+    "": ""
+  },
+  {
+    "kategori": "forretter",
+    "navn": "CHANNA CHAT",
+    "pris": 65,
+    "kortbeskrivelse": "Klassisk indisk salat",
+    "langbeskrivelse": "Salatblandning med kikærter, kartofler, løg, agurk, tomat, citron, tamarinde, koriander og knust pappadam.",
+    "billede": "channa_chat",
+    "id": 5,
+    "": ""
+  },
+  {
+    "kategori": "forretter",
+    "navn": "TANDOORI CHICKEN",
+    "pris": 65,
+    "kortbeskrivelse": "Grillet kyllingelår med naanbrød, salat og chutney.",
+    "langbeskrivelse": "1 styk grillet kyllingelår marineret i krydderier og urter. Serveres med naanbrød, salat og chutney.",
+    "billede": "tandoori_chicken",
+    "id": 6,
+    "": ""
+  },
+  {
+    "kategori": "hovedretter",
+    "navn": "CHICKEN TIKKA MASALA",
+    "pris": 115,
+    "kortbeskrivelse": "En indisk klassiker!",
+    "langbeskrivelse": "Kyllingebryst tilberedt i tandooriovn serveret i masala sovs. Serveres med ris.",
+    "billede": "chicken_tikka_masala",
+    "id": 7,
+    "": ""
+  },
+  {
+    "kategori": "hovedretter",
+    "navn": "BUTTER CHICKEN",
+    "pris": 110,
+    "kortbeskrivelse": "Kylling smørstegt i krydderier.",
+    "langbeskrivelse": "Kylling smørstegt i tandooriovn tilberedt med orientalske krydderier samt tomater. Serveres med ris.",
+    "billede": "butter_chicken",
+    "id": 8,
+    "": ""
+  },
+  {
+    "kategori": "hovedretter",
+    "navn": "SHAHI KORMA",
+    "pris": 110,
+    "kortbeskrivelse": "Karryret. Kan vælges med enten kylling eller lam.",
+    "langbeskrivelse": "Karryret med fløde, kokos, mandler, cashewnødder og krydderier. Serveres med basmatiris.",
+    "billede": "shahi_korma",
+    "id": 9,
+    "": ""
+  },
+  {
+    "kategori": "hovedretter",
+    "navn": "LAMB BIRYANI",
+    "pris": 130,
+    "kortbeskrivelse": "Ris blandet med lam, samt blandede krydderier.",
+    "langbeskrivelse": "Biryani laves over tre omgange, hvor man først steger kødet med krydderier og sovs og dernæst blander det med stegte basmatiris. Endelig koges det ved lavt blus i nogle minutter og serveres med raita (let krydret yoghurt).",
+    "billede": "lamb_biryani",
+    "id": 10,
+    "": ""
+  },
+  {
+    "kategori": "hovedretter",
+    "navn": "LAMB MADRAS",
+    "pris": 120,
+    "kortbeskrivelse": "Stærk karryret til de stærke.",
+    "langbeskrivelse": "Meget stærk karryret med peberfrugt, løg, laurbærblade, chili, sennepsfrø og krydderier. Serveres med basmatiris.",
+    "billede": "lamb_madras",
+    "id": 11,
+    "": ""
+  },
+  {
+    "kategori": "hovedretter",
+    "navn": "BALTI KING PRAWN",
+    "pris": 115,
+    "kortbeskrivelse": "Dejlig ret med rejer og lynstegte grønstager.",
+    "langbeskrivelse": "Balti betyder spand, og retten er karakteriseret ved, at rejer, sovs, løg, tomater, hvidløg, ingefær, peberfrugt og krydderier er stegt ved en høj temperatur. Serveres med basmatiris.",
+    "billede": "balti_king_prawn",
+    "id": 12,
+    "": ""
+  },
+  {
+    "kategori": "desserter",
+    "navn": "KULFI",
+    "pris": 40,
+    "kortbeskrivelse": "Hjemmelavet indisk is.",
+    "langbeskrivelse": "Hjemmelavet indisk is tilberedt på mælk, pistacienødder og mandler.",
+    "billede": "kulfi",
+    "id": 13,
+    "": ""
+  },
+  {
+    "kategori": "desserter",
+    "navn": "CHIKKI",
+    "pris": 40,
+    "kortbeskrivelse": "Chikki er en populær, traditionel samt lækker og sød indisk dessert.",
+    "langbeskrivelse": "Desserten er en populær, traditionel samt lækker og sød indisk dessert. Chikki er sprøde mandel flager, lavet af halverede mandler, ristede sesamfrø og lys karamel.",
+    "billede": "chikki",
+    "id": 14,
+    "": ""
+  },
+  {
+    "kategori": "desserter",
+    "navn": "GULAB JAMUN",
+    "pris": 40,
+    "kortbeskrivelse": "Gulab jamun er klassisk slik fra det indiske køkken.",
+    "langbeskrivelse": "Gulab jamun er dejboller som er blevet frituret i sirup. Hovedingrediensen i dejbollerne er khoa eller khoya og safran.",
+    "billede": "gulab_jamun",
+    "id": 15,
+    "": ""
+  },
+  {
+    "kategori": "drikkevarer",
+    "navn": "MASALA CHAI",
+    "pris": 20,
+    "kortbeskrivelse": "Hjemmelavet indisk te på sort te, mælk og kardemomme.",
+    "langbeskrivelse": "Hjemmelavet indisk te på sort te, mælk og kardemomme.",
+    "billede": "masala_chai",
+    "id": 16,
+    "": ""
+  },
+  {
+    "kategori": "drikkevarer",
+    "navn": "MANGO LASSI",
+    "pris": 25,
+    "kortbeskrivelse": "Hjemmelavet yoghurtdrink med mango.",
+    "langbeskrivelse": "Hjemmelavet yoghurtdrink med mango.",
+    "billede": "mango_lassi",
+    "id": 17,
+    "": ""
+  },
+  {
+    "kategori": "drikkevarer",
+    "navn": "JUICE",
+    "pris": 30,
+    "kortbeskrivelse": "Friskpresset eksotiske juice - flere varianter.",
+    "langbeskrivelse": "Friskpresset eksotiske juice - flere varianter.",
+    "billede": "juice",
+    "id": 18,
+    "": ""
+  },
+  {
+    "kategori": "",
+    "navn": "",
+    "pris": "",
+    "kortbeskrivelse": "",
+    "langbeskrivelse": "",
+    "billede": "",
+    "id": "",
+    "": ""
+  }
+]
