@@ -1,8 +1,8 @@
 /* Website */
 
 .main {
-    max-width: 1000px;
     margin: auto;
+    display: flex;
 }
 
 
@@ -11,12 +11,15 @@ body {
     font-family: 'Lato', sans-serif;
     color: white;
     position: relative;
-    margin: 0;
+    margin: 10px;
     min-height: 100%;
     padding: 20px;
 
 }
 
+h3 {
+    position: hidden;
+}
 
 h2 {
     text-transform: capitalize;
